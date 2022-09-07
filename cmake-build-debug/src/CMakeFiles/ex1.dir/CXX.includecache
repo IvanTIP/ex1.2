@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/SkillboxProjects/project_struct/ex1/include/person_interaction.h
+
+D:/SkillboxProjects/project_struct/ex1/include/tools.h
+
+D:/SkillboxProjects/project_struct/ex1/src/main.cpp
+iostream
+-
+../include/tools.h
+D:/SkillboxProjects/project_struct/ex1/include/tools.h
+../include/person_interaction.h
+D:/SkillboxProjects/project_struct/ex1/include/person_interaction.h
+
