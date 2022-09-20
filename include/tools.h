@@ -1,3 +1,4 @@
+#pragma once
 std::string scalpel () {
     return "The incision was made";
 }
