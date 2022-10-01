@@ -10,17 +10,13 @@ int main() {
         std::cin >> command;
         start_operation (command, scalpelUse);
         if (command == "scalpel") {
-            using_scalpel (coordBeginIncision.x, coordEndIncision.x, coordBeginIncision.y, coordEndIncision.y);
+            using_scalpel ();
         } else if (scalpelUse && command == "hemostat") {
-            coord hemostatPoint;
-            using_hemostat (hemostatPoint.x, hemostatPoint.y);
+            using_hemostat ();
         } else if (scalpelUse && command == "tweezers") {
-            coord tweezerPoint;
-            using_tweezers (tweezerPoint.x, tweezerPoint.y);
+            using_tweezers ();
         } else if (scalpelUse && command == "suture") {
-            coord coordBeginSuture;
-            coord coordEndSuture;
-            make_suture (coordBeginSuture.x, coordEndSuture.x, coordBeginSuture.y, coordEndSuture.y, finish);
+            make_suture (finish);
         }
     }
     return 0;

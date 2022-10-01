@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-D:/SkillboxProjects/project_struct/ex1/include/person_interaction.h
+../include/person_interaction.h
+tools.h
+../include/tools.h
 
-D:/SkillboxProjects/project_struct/ex1/include/tools.h
+../include/tools.h
 
 D:/SkillboxProjects/project_struct/ex1/src/main.cpp
 iostream
 -
-../include/tools.h
-D:/SkillboxProjects/project_struct/ex1/include/tools.h
-../include/person_interaction.h
-D:/SkillboxProjects/project_struct/ex1/include/person_interaction.h
+person_interaction.h
+D:/SkillboxProjects/project_struct/ex1/src/person_interaction.h
 

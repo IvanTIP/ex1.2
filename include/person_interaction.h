@@ -7,6 +7,10 @@ struct coord {
 
 coord coordBeginIncision;
 coord coordEndIncision;
+coord hemostatPoint;
+coord tweezerPoint;
+coord coordBeginSuture;
+coord coordEndSuture;
 
 void start_operation (const std::string& command, bool& scalpelUse) {
 
@@ -17,50 +21,50 @@ void start_operation (const std::string& command, bool& scalpelUse) {
     }
 }
 
-void using_scalpel (double& xBegin, double& xEnd,double& yBegin, double& yEnd) {
+void using_scalpel () {
     std::cout << "Enter the coordinates of the beginning of the cut" << std::endl;
     std::cout << "x = ";
-    std::cin >> xBegin;
+    std::cin >> coordBeginIncision.x;
     std::cout << "y = ";
-    std::cin >> yBegin;
+    std::cin >> coordBeginIncision.y;
     std::cout << "Enter the coordinates of the end of the cut" << std::endl;
     std::cout << "x = ";
-    std::cin >> xEnd;
+    std::cin >> coordEndIncision.x;
     std::cout << "y = ";
-    std::cin >> yEnd;
+    std::cin >> coordEndIncision.y;
     std::cout << scalpel () << std::endl;
 }
 
-void using_hemostat (double& x, double& y) {
+void using_hemostat () {
     std::cout << "Enter the coordinates of the hemostat position" << std::endl;
     std::cout <<  "x = ";
-    std::cin >> x;
+    std::cin >> hemostatPoint.x;
     std::cout <<  "y = ";
-    std::cin >> y;
-    std::cout << hemostat (x, y, coordBeginIncision.x, coordEndIncision.x, coordBeginIncision.y, coordEndIncision.y) << std::endl;
+    std::cin >> hemostatPoint.y;
+    std::cout << hemostat (hemostatPoint.x, hemostatPoint.y, coordBeginIncision.x, coordEndIncision.x, coordBeginIncision.y, coordEndIncision.y) << std::endl;
 }
 
-void using_tweezers (double& x, double& y) {
+void using_tweezers () {
     std::cout << "Enter the coordinates of the tweezer position" << std::endl;
     std::cout <<  "x = ";
-    std::cin >> x;
+    std::cin >> tweezerPoint.x;
     std::cout <<  "y = ";
-    std::cin >> y;
-    std::cout << tweezers (x, y, coordBeginIncision.x, coordEndIncision.x, coordBeginIncision.y, coordEndIncision.y) << std::endl;
+    std::cin >> tweezerPoint.y;
+    std::cout << tweezers (tweezerPoint.x, tweezerPoint.y, coordBeginIncision.x, coordEndIncision.x, coordBeginIncision.y, coordEndIncision.y) << std::endl;
 }
 
-bool make_suture (double& xBegin, double& xEnd, double& yBegin, double& yEnd, bool& finish) {
+bool make_suture (bool &finish) {
     std::cout << "Enter the coordinates of the beginning of the suture" << std::endl;
     std::cout << "x = ";
-    std::cin >> xBegin;
+    std::cin >> coordBeginSuture.x;
     std::cout << "y = ";
-    std::cin >> yBegin;
+    std::cin >> coordBeginSuture.y;
     std::cout << "Enter the coordinates of the end of the cut" << std::endl;
     std::cout << "x = ";
-    std::cin >> xEnd;
+    std::cin >> coordEndSuture.x;
     std::cout << "y = ";
-    std::cin >> yEnd;
-    if (suture (coordBeginIncision.x, coordEndIncision.x, coordBeginIncision.y, coordEndIncision.y, xBegin, xEnd, yBegin, yEnd)) {
+    std::cin >> coordEndSuture.y;
+    if (suture (coordBeginIncision.x, coordEndIncision.x, coordBeginIncision.y, coordEndIncision.y, coordBeginSuture.x, coordEndSuture.x, coordBeginSuture.y, coordEndSuture.y)) {
         std::cout << "The suture was made" << std::endl << "The operation is over" << std::endl;
         return finish = true;
     } else {
@@ -68,4 +72,3 @@ bool make_suture (double& xBegin, double& xEnd, double& yBegin, double& yEnd, bo
         return finish;
     }
 }
-
