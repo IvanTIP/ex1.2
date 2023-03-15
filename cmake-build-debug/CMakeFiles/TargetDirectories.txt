@@ -1,5 +1,0 @@
-D:/SkillboxProjects/project_struct/ex1/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/SkillboxProjects/project_struct/ex1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/SkillboxProjects/project_struct/ex1/cmake-build-debug/src/CMakeFiles/ex1.dir
-D:/SkillboxProjects/project_struct/ex1/cmake-build-debug/src/CMakeFiles/edit_cache.dir
-D:/SkillboxProjects/project_struct/ex1/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
